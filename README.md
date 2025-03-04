@@ -21,6 +21,7 @@ software-dev-chatbot/
 ├── config.js                 # Configuration file
 ├── openai.js                 # OpenAI API integration
 ├── server.js                 # Backend server
+├── dockerfile                # Docker configuration
 ├── public/
 │   ├── chat.png              # Chatbot UI asset
 │   ├── index.html            # Web frontend
@@ -60,7 +61,19 @@ software-dev-chatbot/
 - The chatbot will process your input and respond intelligently.
 
 ## Deployment
-To deploy on a cloud server (e.g., **Heroku, Vercel, or AWS**):
+### Deploy with Docker
+You can run the chatbot using Docker:
+1. Build the Docker image:
+   ```sh
+   docker build -t chatbot .
+   ```
+2. Run the Docker container:
+   ```sh
+   docker run -p 3000:3000 chatbot
+   ```
+3. Open `http://localhost:3000` in your browser.
+
+### Deploy on a Cloud Server (e.g., Heroku, Vercel, AWS)
 1. Set up your environment variables for the OpenAI API key.
 2. Use a process manager like **PM2** for stability:
    ```sh
