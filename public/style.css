@@ -1,0 +1,218 @@
+/* chat-container */
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    position: relative;
+    background: linear-gradient(to bottom,  #ff8c00, #ff6600);
+}
+
+/* Timestamp */
+.timestamp {
+    font-size: 12px;
+    color: rgb(226, 225, 225);
+    opacity: 0.9;
+    align-self: flex-end;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* Logo */
+.logo {
+    width: auto;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 20px;
+}
+
+/* Chatbot window name */
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Chat window */
+.chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+/* input-container */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Input text */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* chat log */
+.chat-log {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+/* Added space between user prompts */
+.chat-log p {
+    margin: 10px 0;
+}
+
+/* message-container */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* User message alignment */
+.message-container.user {
+    align-items: flex-end; /* right */
+    text-align: right;
+}
+
+/* chatbot message alignment */
+.message-container.chatbot {
+    align-items: flex-start; /* left */
+    text-align: left;
+}
+
+/* Sender name */
+.sender-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+/* User name */
+.sender-name.user {
+    color: #f9a229;
+    align-self: flex-end;
+    text-align: right;
+}
+
+/* Chatbot name */
+.sender-name.chatbot {
+    color: #c68c53;
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: none;
+    font-size: 14px;
+    color: #555;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-top: auto;
+}
+.typing-indicator span {
+    animation: bounce 1.5s infinite alternate;
+}
+@keyframes bounce {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Message style */
+.message {
+    max-width: 60%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 10px;
+    font-size: 16px;
+    word-wrap: break-word;
+    display: flex;
+}
+
+/* User messages */
+.message.user {
+    background-color: #f9a229;
+    color: white;
+    align-self: flex-end;
+    text-align: left;
+    justify-content: flex-end;
+}
+
+/* Chatbot Messages */
+.message.chatbot {
+    background-color: #c68c53;
+    color: white;
+    align-self: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Input container */
+.input-container input[type="text"] {
+    flex: 1;
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Send button */
+.input-container button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #ff6600;
+}
+
+/* Reset margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
