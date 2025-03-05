@@ -15,7 +15,7 @@ This is an AI-powered chatbot built with Node.js and OpenAI's API. The chatbot p
 
 ## Project Structure
 ```
-software-dev-chatbot/
+AI-Powered-Chatbot/
 ├── package.json              # Project dependencies
 ├── package-lock.json         # Dependency lock file
 ├── config.js                 # Configuration file
