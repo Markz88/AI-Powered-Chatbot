@@ -19,11 +19,11 @@ class OpenAIAPI {
         });
         const responseData = await response.json(); // Parse the JSON response
         // Log the entire API response for debugging
-        console.log('Response from OpenAI API:', responseData.choices[0].message);
+        console.log('Response from OpenAI API:', responseData);
         // Check if choices array is defined and not empty
-        if (responseData.choices && responseData.choices.length > 0 && responseData.choices[0].message) {
+        if (responseData.choices && responseData.choices.length > 0) {
             // Return the response content from the first choice
-            return responseData.choices[0].message.content;
+            return responseData.choices[0].text.trim();
         } else {
             // Handle the case where choices array is undefined or empty
             console.error('Error: No valid response from OpenAI API');
