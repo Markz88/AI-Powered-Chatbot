@@ -23,7 +23,7 @@ class OpenAIAPI {
         // Check if choices array is defined and not empty
         if (responseData.choices && responseData.choices.length > 0) {
             // Return the response content from the first choice
-            return responseData.choices[0].text.trim();
+            return responseData.choices[0].message?.content || responseData.choices[0].text?.trim() || "";
         } else {
             // Handle the case where choices array is undefined or empty
             console.error('Error: No valid response from OpenAI API');
