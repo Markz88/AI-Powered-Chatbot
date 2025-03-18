@@ -85,4 +85,4 @@ You can run the chatbot using Docker:
 This project is available under the MIT License.
 
 ## References
-[Generative AI for Software Developers Specialization](https://www.coursera.org/specializations/generative-ai-for-software-developers)
+- [Generative AI for Software Developers Specialization](https://www.coursera.org/specializations/generative-ai-for-software-developers)
